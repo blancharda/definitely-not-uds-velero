@@ -1,0 +1,15 @@
+variables:
+  - name: FLAVOR
+    default: "registry1"
+
+tasks:
+  - name: velero-test-bundle
+    description: Create the UDS bundle with Velero and its dependencies
+    actions:
+      - task: velero-package
+      - cmd: uds create bundle --confirm --no-progress --architecture=${UDS_ARCH}
+
+  - name: velero-package
+    description: Create the UDS Velero Zarf Package
+    actions:
+      - cmd: zarf package create --confirm --no-progress --architecture=${ZARF_ARCHITECTURE} --flavor ${FLAVOR}

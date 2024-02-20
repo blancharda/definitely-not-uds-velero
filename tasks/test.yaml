@@ -1,0 +1,9 @@
+tasks:
+  - name: health-check
+    actions:
+      - description: Velero StatefulSet Health Check
+        wait:
+          cluster:
+            kind: Deployment
+            name: velero
+            namespace: velero

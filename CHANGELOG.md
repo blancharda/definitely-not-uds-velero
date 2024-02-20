@@ -1,0 +1,7 @@
+## [0.0.0] - 2024-02-20
+PRE RELEASE
+
+### Added
+- Initial CHANGELOG.md
+- CONTRIBUTING.md
+- CODEOWNERS

@@ -1,0 +1,18 @@
+kind: UDSBundle
+metadata:
+  name: velero-test
+  description: A UDS bundle for deploying velero and it's dependencies on a development cluster
+  # x-release-please-start-version
+  version: 0.0.1
+  # x-release-please-end
+
+packages:
+  - name: dev-minio
+    repository: ghcr.io/defenseunicorns/packages/uds/dev-minio
+    ref: 0.0.1
+
+  - name: velero
+    path: ../
+    # x-release-please-start-version
+    ref: 0.0.1
+    # x-release-please-end

@@ -1,0 +1,12 @@
+apiVersion: uds.dev/v1alpha1
+kind: Package
+metadata:
+  name: velero
+  namespace: {{ .Release.Namespace }}
+spec:
+  network:
+    allow:
+      - direction: Egress
+        podLabels:
+          app.kubernetes.io/name: velero
+        remoteGenerated: Anywhere
