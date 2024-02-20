@@ -3,7 +3,7 @@ variables:
     buckets: |
       - name: velero
   velero:
-   VELERO_BUCKET_PROVIDER_URL: "postgresql.dev-postgres.svc.cluster.local"
+   VELERO_BUCKET_PROVIDER_URL: "http://minio.minio.svc.cluster.local:9000"
    VELERO_BUCKET: "velero"
    VELERO_BUCKET_REGION: "minio-region"
    VELERO_BUCKET_KEY: "nouser"

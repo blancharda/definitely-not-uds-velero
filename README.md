@@ -73,3 +73,7 @@ packages:
     repository: ghcr.io/defenseunicorns/uds/velero
     ref: x.x.x
 ```
+## Manually trigger the default backup for testing purposes
+```
+velero backup create --from-schedule velero-udsbackup -n velero
+```
