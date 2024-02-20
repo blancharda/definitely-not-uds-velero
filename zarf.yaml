@@ -35,6 +35,10 @@ components:
     only:
       flavor: registry1
     charts:
+    - name: uds-velero-config
+      namespace: velero
+      version: 0.1.0
+      localPath: chart
     - name: velero
       namespace: velero
       url: https://repo1.dso.mil/big-bang/product/packages/velero.git
@@ -42,10 +46,6 @@ components:
       version: "5.2.2-bb.0"
       valuesFiles:
         - values/velero-values.yaml
-    - name: uds-velero-config
-      namespace: velero
-      version: 0.1.0
-      localPath: chart
     images:
       - registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.28.6
       - registry1.dso.mil/ironbank/opensource/velero/velero:v1.12.3
@@ -60,6 +60,10 @@ components:
     only:
       flavor: upstream
     charts:
+    - name: uds-velero-config
+      namespace: velero
+      version: 0.1.0
+      localPath: chart
     - name: velero
       namespace: velero
       url: https://vmware-tanzu.github.io/helm-charts
@@ -69,10 +73,6 @@ components:
       valuesFiles:
         - values/velero-values.yaml
         - values/upstream.yaml
-    - name: uds-velero-config
-      namespace: velero
-      version: 0.1.0
-      localPath: chart
     images:
       - velero/velero:v1.13.0
       - velero/velero-plugin-for-csi:v0.7.0
