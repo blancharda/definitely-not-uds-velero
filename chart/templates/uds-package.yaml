@@ -10,7 +10,7 @@ spec:
         podLabels:
           app.kubernetes.io/name: velero
         remoteGenerated: Anywhere
-      # - direction: Egress
-      #   podLabels:
-      #     batch.kubernetes.io/job-name: "velero-upgrade-crds"
-      #   remoteGenerated: Anywhere
+      - direction: Egress
+        podLabels:
+          batch.kubernetes.io/job-name: "velero-upgrade-crds"
+        remoteGenerated: Anywhere
