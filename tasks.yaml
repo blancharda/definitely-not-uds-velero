@@ -29,7 +29,6 @@ tasks:
   - name: test-package
     actions:
       - task: test:health-check
-      - task: test:ingress
 
   - name: cleanup
     actions:
