@@ -8,11 +8,6 @@ Bigbang [Velero](https://repo1.dso.mil/big-bang/product/packages/velero) deploye
 
 - k3d installed on machine
 
-#### General Usage
-
-- Create `velero` namespace
-- Label `velero` namespace with `istio-injection: enabled`
-
 #### Object Storage
 
 S3 compatible object storage must be available in order to use this package. Bucket information and access credentials can be provided via configuration values / env vars:
