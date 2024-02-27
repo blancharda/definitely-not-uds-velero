@@ -13,9 +13,9 @@ tasks:
   - name: execute-backup
     actions:
       - description: generates a unique backup name
-        cmd: echo "velero-test-$(date +'%Y%m%d%H%M%S')"
+        cmd: "echo \"velero-test-$(date +'%Y%m%d%H%M%S')\""
         mute: true
-        setVariable:
+        setVariables:
           - name: BACKUP_NAME
       - description: creates a velero backup object (equivilent of `velero backup create --from-schedule ...`)
         cmd: |-
