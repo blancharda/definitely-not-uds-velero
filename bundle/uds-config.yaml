@@ -6,5 +6,3 @@ variables:
    VELERO_BUCKET_PROVIDER_URL: "http://minio.dev-minio.svc.cluster.local:9000"
    VELERO_BUCKET: "velero"
    VELERO_BUCKET_REGION: "minio-region"
-   VELERO_BUCKET_KEY: "nouser"
-   VELERO_BUCKET_KEY_SECRET: "nopass"

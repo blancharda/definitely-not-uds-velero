@@ -13,3 +13,8 @@ tasks:
     description: Create the UDS Velero Zarf Package
     actions:
       - cmd: zarf package create --confirm --no-progress --architecture=${ZARF_ARCHITECTURE} --flavor ${FLAVOR}
+
+  - name: dependency-package
+    description: Create the Minio
+    actions:
+      - cmd: zarf package create src/dev-secrets/ --confirm --no-progress --architecture=${UDS_ARCH} --skip-sbom
