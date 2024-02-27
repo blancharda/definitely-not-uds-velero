@@ -7,6 +7,7 @@ tasks:
     description: Create the UDS bundle with Velero and its dependencies
     actions:
       - task: velero-package
+      - task: dependency-package
       - cmd: uds create bundle --confirm --no-progress --architecture=${UDS_ARCH}
 
   - name: velero-package
