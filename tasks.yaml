@@ -29,6 +29,7 @@ tasks:
   - name: test-package
     actions:
       - task: test:health-check
+      - task: test:execute-backup
 
   - name: cleanup
     actions:
